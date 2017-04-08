@@ -2,10 +2,15 @@ require 'pry'
 
 class Song
 
-  attr_accessor :title, :artist
+  attr_accessor :name, :artist
 
-  def initialize(title)
-    @title = title
+  def initialize(name)
+    @name = name
+  end
+
+  def artist_name
+    return nil if artist == nil
+    artist.name
   end
 
 end
